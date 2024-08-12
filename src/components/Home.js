@@ -23,7 +23,7 @@ export default function Home(){
 
   const fetchTransaction = async () => {
         try {
-           const response = await fetch("https://phase-2-code-challenge-1-ec8o.vercel.app/transactions");
+           const response = await fetch("https://bank-backend-seven.vercel.app/transactions");
            const data = await response.json()
            setTransactions(data);
            console.log(data)
@@ -47,7 +47,7 @@ export default function Home(){
 
   const addTransaction = async (newTransaction) => {
       try {
-          const response = await fetch("https://phase-2-code-challenge-1-ec8o.vercel.app/transactions", {
+          const response = await fetch("https://bank-backend-seven.vercel.app/transactions", {
              method: 'POST',
              headers: {
               'Content-Type' : 'application/json'
@@ -67,7 +67,7 @@ export default function Home(){
 
   const handleDelete = async (id) => {
     try {
-        const response = await fetch(`https://json-server-vercel-green-kappa.vercel.app/transactions/${id}`, {
+        const response = await fetch(`https://bank-backend-seven.vercel.app/transactions/${id}`, {
            method: 'DELETE'
                   });
         if(response.ok){
